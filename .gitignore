@@ -5,7 +5,7 @@ implementation-*.png
 ignite-partners-pages.zip
 
 # Local preview and QA images
-*-preview.png
+*-preview*.png
 live-official-logo*.png
 
 # OS and editor files
