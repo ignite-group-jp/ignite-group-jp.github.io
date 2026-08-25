@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#031326" />
+  <title>IGNITE Partners｜企業の成長に火をつける</title>
+  <meta name="description" content="IGNITE Partnersは、企業の可能性を見いだし、目標設定から戦略設計、実行まで、成果が生まれるところまで伴走するビジネスパートナーです。" />
+  <meta property="og:title" content="IGNITE Partners｜企業の成長に火をつける" />
+  <meta property="og:description" content="可能性を見つけ、道筋を描き、成果までともに歩む。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/brand/ignite-partners-hero.png" />
+  <link rel="icon" href="assets/brand/ignite-partners-logo.png" />
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink:#020b17; --navy:#031326; --navy-mid:#061a32; --paper:#f8f5ed;
+      --muted:#b7c1ce; --gold:#d6a64c; --gold-bright:#f1c36a;
+      --line:rgb(214 166 76 / 48%);
+      --serif:"Yu Mincho","YuMincho","Hiragino Mincho ProN","Noto Serif JP",Georgia,serif;
+      --sans:"Yu Gothic","YuGothic","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+      --max:1180px; --gutter:clamp(24px,5vw,72px); --section:clamp(96px,12vw,168px);
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:84px;background:var(--ink)}
+    body{min-width:320px;margin:0;overflow-x:hidden;background:var(--navy);color:var(--paper);font-family:var(--sans);font-size:16px;line-height:1.9;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none} img{display:block;max-width:100%} button{color:inherit;font:inherit}
+    .skip-link{position:fixed;z-index:1000;top:10px;left:10px;padding:8px 14px;transform:translateY(-160%);background:var(--paper);color:var(--ink)}
+    .skip-link:focus{transform:none}
+    .site-header{position:fixed;z-index:100;inset:0 0 auto;height:76px;border-bottom:1px solid rgb(214 166 76 / 25%);background:rgb(2 11 23 / 78%);backdrop-filter:blur(18px)}
+    .header-inner,.hero-inner,.section-inner{width:min(100%,calc(var(--max) + var(--gutter)*2));margin:0 auto;padding-inline:var(--gutter)}
+    .header-inner{height:100%;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:inline-flex;align-items:center;gap:9px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.1rem,2vw,1.48rem);letter-spacing:.035em;white-space:nowrap}
+    .brand span:last-child{color:var(--gold-bright)}
+    .brand-mark{position:relative;width:36px;height:38px;overflow:hidden;flex:0 0 auto}
+    .brand-mark img{position:absolute;width:255px;max-width:none;top:-44px;left:-110px}
+    .nav-list{display:flex;gap:clamp(24px,3.2vw,46px);align-items:center;margin:0;padding:0;list-style:none;font-size:.79rem;letter-spacing:.12em}
+    .nav-list a{position:relative;padding:12px 0}
+    .nav-list a::after{position:absolute;right:0;bottom:3px;left:0;height:1px;content:"";transform:scaleX(0);transform-origin:right;background:var(--gold);transition:transform 260ms ease}
+    .nav-list a:hover::after,.nav-list a:focus-visible::after{transform:scaleX(1);transform-origin:left}
+    .menu-toggle{display:none;width:44px;height:44px;padding:11px 8px;border:0;background:transparent;cursor:pointer}
+    .menu-toggle span{display:block;width:24px;height:1px;margin:6px auto;background:var(--paper);transition:transform 220ms ease,opacity 220ms ease}
+    .hero{position:relative;min-height:100svh;display:grid;align-items:center;overflow:hidden;isolation:isolate;border-bottom:1px solid var(--line);background:radial-gradient(circle at 73% 93%,rgb(242 165 55 / 12%),transparent 20%),radial-gradient(circle at 18% 30%,rgb(17 57 99 / 38%),transparent 36%),linear-gradient(125deg,#020c19 0%,#04182d 56%,#020b17 100%)}
+    .hero::before{position:absolute;inset:0;z-index:-3;content:"";opacity:.2;background-image:linear-gradient(135deg,transparent 0 73%,rgb(214 166 76 / 28%) 73.1% 73.25%,transparent 73.35%),linear-gradient(90deg,transparent 0 92%,rgb(214 166 76 / 14%) 92.1% 92.2%,transparent 92.3%)}
+    .hero::after{position:absolute;top:76px;left:0;width:120px;height:2px;content:"";transform:rotate(-50deg) translate(-4px,-4px);transform-origin:left;background:var(--gold-bright);box-shadow:0 0 16px rgb(241 195 106 / 40%)}
+    .hero-art{position:absolute;z-index:-1;right:0;bottom:0;width:58%;height:calc(100% - 76px);object-fit:cover;object-position:left bottom;opacity:0;mix-blend-mode:screen;animation:art-ignite 1.7s 220ms cubic-bezier(.2,.8,.2,1) forwards}
+    .hero-inner{padding-top:116px;padding-bottom:72px}.hero-copy{width:min(660px,55vw)}
+    .hero h1{margin:0;font-family:var(--serif);font-size:clamp(3.25rem,5.3vw,5.25rem);font-weight:500;line-height:1.25;letter-spacing:.04em;text-wrap:balance}
+    .hero h1 .accent{color:var(--gold-bright);text-shadow:0 0 30px rgb(237 169 63 / 14%)}
+    .hero-rule{width:64px;height:1px;margin:34px 0 24px;background:var(--gold)}
+    .hero-lead{margin:0;color:#d8dee6;font-size:clamp(.94rem,1.4vw,1.08rem);line-height:2.05;letter-spacing:.035em}
+    .scroll-cue{position:absolute;bottom:25px;left:50%;display:flex;align-items:center;gap:10px;transform:translateX(-50%);color:rgb(248 245 237 / 58%);font-size:.64rem;letter-spacing:.2em;writing-mode:vertical-rl}
+    .scroll-cue::after{width:1px;height:38px;content:"";background:linear-gradient(var(--gold),transparent);animation:scroll-pulse 1.8s ease-in-out infinite}
+    section:not(.hero){position:relative;padding-block:var(--section)}
+    .about{background:radial-gradient(circle at 14% 52%,rgb(19 66 111 / 32%),transparent 40%),linear-gradient(90deg,#061a32,#04172c)}
+    .about-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(48px,6vw,80px);align-items:center}
+    .section-label{display:flex;align-items:center;gap:14px;margin:0 0 25px;color:var(--gold-bright);font-family:Georgia,serif;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase}
+    .section-label::after{width:34px;height:1px;content:"";background:var(--gold)}
+    .section-title{margin:0;font-family:var(--serif);font-size:clamp(2rem,3.8vw,3.45rem);font-weight:500;line-height:1.55;letter-spacing:.05em}
+    .about .section-title{font-size:clamp(2rem,2.7vw,2.3rem)}
+    .about-copy{color:#cbd3dd;font-size:clamp(.95rem,1.4vw,1.05rem);line-height:2.15}.about-copy p{margin:0 0 1.2em}.about-copy p:last-child{margin-bottom:0}
+    .strengths{overflow:hidden;background:linear-gradient(115deg,transparent 60%,rgb(18 62 104 / 14%)),var(--ink)}
+    .strengths::after,.approach::after{position:absolute;z-index:0;right:-4%;bottom:-20%;width:420px;aspect-ratio:1;border:1px solid rgb(214 166 76 / 8%);content:"";transform:rotate(45deg)}
+    .strengths .section-inner,.approach .section-inner{position:relative;z-index:1}
+    .strength-list{display:grid;grid-template-columns:repeat(4,1fr);margin-top:50px;border-top:1px solid var(--line)}
+    .strength-item{min-height:300px;padding:42px clamp(22px,2.8vw,38px) 0;border-right:1px solid rgb(214 166 76 / 27%)}
+    .strength-item:first-child{padding-left:0}.strength-item:last-child{padding-right:0;border-right:0}
+    .strength-number{display:block;margin-bottom:30px;color:var(--gold-bright);font-family:Georgia,serif;font-size:1.72rem;line-height:1}
+    .strength-item h3{margin:0 0 19px;padding-bottom:17px;border-bottom:1px solid rgb(214 166 76 / 55%);font-family:var(--serif);font-size:clamp(1.15rem,1.6vw,1.4rem);font-weight:500;letter-spacing:.035em}
+    .strength-item p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.95}
+    .approach{overflow:hidden;background:radial-gradient(circle at 70% 60%,rgb(26 80 128 / 28%),transparent 42%),linear-gradient(120deg,#06203b,#04172c)}
+    .approach .section-title{max-width:780px}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:64px 0 0;padding:0;list-style:none}
+    .step{position:relative;padding:0 clamp(22px,3vw,42px);text-align:center}.step:first-child{padding-left:0}.step:last-child{padding-right:0}
+    .step:not(:last-child)::after{position:absolute;top:49px;right:-11px;width:58px;height:1px;content:"";background:linear-gradient(90deg,var(--gold),transparent)}
+    .step:not(:last-child)::before{position:absolute;z-index:1;top:45px;right:-12px;width:8px;height:8px;border-top:1px solid var(--gold);border-right:1px solid var(--gold);content:"";transform:rotate(45deg)}
+    .step-number{display:block;margin-bottom:16px;color:var(--gold-bright);font-family:Georgia,serif;font-size:1.85rem;line-height:1}
+    .step-mark{position:relative;display:grid;width:54px;height:54px;margin:0 auto 20px;place-items:center;border:1px solid var(--gold);color:var(--gold-bright);font-family:Georgia,serif;font-size:.68rem;transform:rotate(45deg)}.step-mark span{transform:rotate(-45deg)}
+    .step h3{margin:0 0 13px;font-family:var(--serif);font-size:clamp(1.12rem,1.7vw,1.35rem);font-weight:500}.step p{margin:0;color:var(--muted);font-size:.86rem;line-height:1.85}
+    .company{background:var(--ink)}.company-grid{display:grid;grid-template-columns:minmax(210px,.55fr) minmax(0,1.45fr);gap:clamp(60px,10vw,140px);align-items:start}
+    .company-list{margin:0;border-top:1px solid var(--line)}.company-row{display:grid;grid-template-columns:180px 1fr;border-bottom:1px solid rgb(214 166 76 / 34%)}
+    .company-row dt,.company-row dd{margin:0;padding:25px 20px}.company-row dt{color:var(--gold-bright);font-size:.84rem;letter-spacing:.12em}.company-row dd{color:#d8dee6;border-left:1px solid rgb(214 166 76 / 34%);font-size:.95rem}
+    .site-footer{padding:36px var(--gutter);border-top:1px solid var(--line);background:#010813;text-align:center}.footer-brand{margin:0 0 8px;font-family:Georgia,serif;font-size:1.03rem;letter-spacing:.08em}.copyright{margin:0;color:rgb(248 245 237 / 50%);font-family:Georgia,serif;font-size:.68rem;letter-spacing:.08em}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity 800ms ease,transform 800ms cubic-bezier(.2,.8,.2,1)}.reveal.is-visible{opacity:1;transform:none}
+    @keyframes art-ignite{0%{opacity:0;transform:translateY(20px);filter:brightness(.5)}72%{opacity:.52}100%{opacity:.32;transform:none;filter:brightness(.82) saturate(.7)}}
+    @keyframes scroll-pulse{0%,100%{transform:scaleY(.45);transform-origin:top;opacity:.4}50%{transform:scaleY(1);transform-origin:top;opacity:1}}
+    @media(max-width:920px){.hero-copy{width:min(580px,68vw)}.hero-art{right:0;width:62%}.about-grid,.company-grid{grid-template-columns:1fr;gap:54px}.strength-list{grid-template-columns:repeat(2,1fr)}.strength-item:nth-child(2){border-right:0}.strength-item:nth-child(n+3){border-top:1px solid rgb(214 166 76 / 27%)}.strength-item:nth-child(3){padding-left:0}.steps{grid-template-columns:repeat(2,1fr);row-gap:70px}.step:nth-child(2)::after,.step:nth-child(2)::before{display:none}}
+    @media(max-width:720px){.site-header{height:68px}.menu-toggle{display:block}.menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(7px) rotate(45deg)}.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}.menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-7px) rotate(-45deg)}.nav-list{position:fixed;inset:68px 0 auto;display:grid;gap:0;padding:20px var(--gutter) 24px;transform:translateY(-130%);border-bottom:1px solid var(--line);background:rgb(2 11 23 / 97%);transition:transform 260ms ease}.nav-list.is-open{transform:none}.nav-list a{display:block;padding:13px 0}.hero{min-height:800px}.hero-inner{align-self:start;padding-top:150px}.hero-copy{width:100%}.hero h1{font-size:clamp(2.65rem,10.8vw,3.9rem);line-height:1.36}.hero-art{right:0;bottom:0;width:100%;height:58%;object-position:left bottom}.scroll-cue{display:none}.company-row{grid-template-columns:110px 1fr}.company-row dt,.company-row dd{padding:20px 14px}}
+    @media(max-width:560px){:root{--gutter:22px;--section:88px}.brand-mark{width:31px;height:34px}.brand-mark img{width:228px;top:-40px;left:-99px}.strength-list,.steps{grid-template-columns:1fr}.strength-item,.strength-item:first-child,.strength-item:nth-child(3),.strength-item:last-child{min-height:auto;padding:34px 0;border-right:0;border-bottom:1px solid rgb(214 166 76 / 27%)}.strength-item:first-child{padding-top:40px}.strength-item:last-child{border-bottom:0}.strength-item:nth-child(n+3){border-top:0}.strength-number{margin-bottom:18px}.steps{row-gap:0}.step,.step:first-child,.step:last-child{padding:34px 0 42px 82px;text-align:left}.step:not(:last-child)::after{top:101px;right:auto;left:26px;width:1px;height:52px;background:linear-gradient(var(--gold),transparent)}.step:not(:last-child)::before{top:144px;right:auto;left:22px;transform:rotate(135deg)}.step-number{position:absolute;top:35px;left:15px}.step-mark{position:absolute;top:78px;left:7px;width:42px;height:42px;margin:0}.company-row{grid-template-columns:94px 1fr}.company-row dd{font-size:.86rem}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal,.hero-art{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="IGNITE Partners トップへ"><span class="brand-mark" aria-hidden="true"><img src="assets/brand/ignite-partners-logo.png" alt="" /></span><span>IGNITE</span><span>Partners</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+      <nav aria-label="メインナビゲーション"><ul class="nav-list" id="site-nav"><li><a href="#about">私たちについて</a></li><li><a href="#strengths">強み</a></li><li><a href="#approach">進め方</a></li><li><a href="#company">会社情報</a></li></ul></nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <img class="hero-art" src="assets/brand/ignite-partners-hero.png" alt="" />
+      <div class="hero-inner"><div class="hero-copy"><h1 id="hero-title">企業の成長に、<br /><span class="accent">火</span>をつける。</h1><div class="hero-rule" aria-hidden="true"></div><p class="hero-lead">可能性を見つけ、進むべき道筋を描き、<br />成果が生まれるところまで。<br />IGNITE Partnersは、構想と実行をつなぐパートナーです。</p></div></div>
+      <div class="scroll-cue" aria-hidden="true">SCROLL</div>
+    </section>
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="section-inner about-grid"><div class="reveal"><p class="section-label">About</p><h2 class="section-title" id="about-title">まだ形になっていない<br />可能性を、事業の力に。</h2></div><div class="about-copy reveal"><p>企業の中には、まだ十分に生かされていない商品、技術、人材、そしてつながりがあります。可能性があっても、何から始め、どの順序で進めればよいのかが見えなければ、事業は前へ進みません。</p><p>IGNITE Partnersは、経営者と同じ目線で目標を定め、実現までの道筋を組み立て、一つひとつの行動に落とし込みます。</p><p>私たちが目指すのは、提案して終わる支援ではありません。人と企業をつなぎ、成果が生まれる仕組みをともにつくります。</p></div></div>
+    </section>
+    <section class="strengths" id="strengths" aria-labelledby="strengths-title">
+      <div class="section-inner"><div class="reveal"><p class="section-label">Strengths</p><h2 class="section-title" id="strengths-title">私たちの強み</h2></div><div class="strength-list">
+        <article class="strength-item reveal"><span class="strength-number">01</span><h3>可能性を見つける</h3><p>商品やサービスの価値を別の角度から捉え直し、まだ見えていない市場や活用方法を見いだします。</p></article>
+        <article class="strength-item reveal"><span class="strength-number">02</span><h3>道筋をつくる</h3><p>大きな目標を実行できる単位へ分解し、優先順位と手順を整理。進むための具体的な階段を設計します。</p></article>
+        <article class="strength-item reveal"><span class="strength-number">03</span><h3>つないで、動かす</h3><p>必要な企業や人との接点をつくるだけでなく、提案、交渉、仕組みづくりまで実行に関わります。</p></article>
+        <article class="strength-item reveal"><span class="strength-number">04</span><h3>成果まで伴走する</h3><p>助言だけでは終わりません。現場とともに試し、改善し、継続的に成果を生む形へ育てます。</p></article>
+      </div></div>
+    </section>
+    <section class="approach" id="approach" aria-labelledby="approach-title">
+      <div class="section-inner"><div class="reveal"><p class="section-label">Approach</p><h2 class="section-title" id="approach-title">小さな達成を積み重ね、<br />大きな目標へ。</h2></div><ol class="steps">
+        <li class="step reveal"><span class="step-number">01</span><span class="step-mark" aria-hidden="true"><span>GOAL</span></span><h3>目標を定める</h3><p>経営者の思いと、事業の現在地を整理します。</p></li>
+        <li class="step reveal"><span class="step-number">02</span><span class="step-mark" aria-hidden="true"><span>PLAN</span></span><h3>道筋を描く</h3><p>課題を分解し、優先順位と実行計画を設計します。</p></li>
+        <li class="step reveal"><span class="step-number">03</span><span class="step-mark" aria-hidden="true"><span>ACT</span></span><h3>ともに動く</h3><p>営業、連携、提案など、必要な行動を現場で進めます。</p></li>
+        <li class="step reveal"><span class="step-number">04</span><span class="step-mark" aria-hidden="true"><span>GROW</span></span><h3>成果につなげる</h3><p>検証と改善を重ね、継続できる仕組みへ育てます。</p></li>
+      </ol></div>
+    </section>
+    <section class="company" id="company" aria-labelledby="company-title">
+      <div class="section-inner company-grid"><div class="reveal"><p class="section-label">Company</p><h2 class="section-title" id="company-title">会社情報</h2></div><dl class="company-list reveal"><div class="company-row"><dt>名称</dt><dd>IGNITE Partners</dd></div><div class="company-row"><dt>創業</dt><dd>2024年10月</dd></div><div class="company-row"><dt>事業内容</dt><dd>経営・事業戦略支援／営業組織構築支援／新規事業開発支援</dd></div></dl></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p class="footer-brand">IGNITE <span style="color:var(--gold-bright)">Partners</span></p><p class="copyright">© IGNITE Partners. All Rights Reserved.</p></footer>
+  <script>
+    const toggle=document.querySelector('.menu-toggle');const nav=document.querySelector('.nav-list');
+    const closeMenu=()=>{toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','メニューを開く');nav.classList.remove('is-open')};
+    toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!open));toggle.setAttribute('aria-label',open?'メニューを開く':'メニューを閉じる');nav.classList.toggle('is-open',!open)});
+    nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:.14});
+    document.querySelectorAll('.reveal').forEach((element,index)=>{element.style.transitionDelay=`${Math.min(index%4,3)*70}ms`;observer.observe(element)});
+  </script>
+</body>
+</html>
