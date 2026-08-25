@@ -14,4 +14,4 @@ IGNITE Partnersの公式コーポレートサイトです。
 
 ## Hosting
 
-GitHub Pagesで `main` ブランチのルートから配信し、カスタムドメイン `ignitepartners.jp` を使用します。
+GitHub Pagesで `main` ブランチのルートから配信します。内容確認後にカスタムドメインを接続します。
