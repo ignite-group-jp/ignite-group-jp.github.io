@@ -1,6 +1,6 @@
-# IGNITE Partners Corporate Website
+# IGNITE Partners CONSULTING Corporate Website
 
-IGNITE Partnersの公式コーポレートサイトです。
+IGNITE Partners CONSULTINGの公式コーポレートサイトです。
 
 ## Structure
 
