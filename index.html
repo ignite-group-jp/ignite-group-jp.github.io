@@ -62,6 +62,15 @@
     .section-title{margin:0;font-family:var(--serif);font-size:clamp(2rem,3.8vw,3.45rem);font-weight:500;line-height:1.55;letter-spacing:.05em}
     .about .section-title{font-size:clamp(2rem,2.7vw,2.3rem)}
     .about-copy{color:#cbd3dd;font-size:clamp(.95rem,1.4vw,1.05rem);line-height:2.15}.about-copy p{margin:0 0 1.2em}.about-copy p:last-child{margin-bottom:0}
+    .information{overflow:hidden;background:linear-gradient(135deg,#0a2340,#06182d)}
+    .information::before{position:absolute;top:-220px;right:-150px;width:520px;aspect-ratio:1;border:1px solid rgb(214 166 76 / 10%);content:"";transform:rotate(45deg)}
+    .information-grid{position:relative;display:grid;grid-template-columns:minmax(210px,.55fr) minmax(0,1.45fr);gap:clamp(60px,10vw,140px);align-items:start}
+    .information-list{margin:0;border-top:1px solid var(--line)}
+    .information-item{display:grid;grid-template-columns:150px 1fr;gap:clamp(24px,4vw,58px);padding:38px 0;border-bottom:1px solid rgb(214 166 76 / 34%)}
+    .information-meta{color:var(--gold-bright);font-family:Georgia,"Times New Roman",serif;font-size:.84rem;letter-spacing:.1em;line-height:1.55}
+    .information-copy h3{margin:0 0 14px;font-family:var(--serif);font-size:clamp(1.28rem,2.1vw,1.75rem);font-weight:500;line-height:1.65;letter-spacing:.035em}
+    .information-copy p{margin:0;color:#cbd3dd;font-size:.95rem;line-height:2.05}
+    .information-name{color:var(--gold-bright);font-family:Georgia,"Times New Roman",serif;letter-spacing:.05em}
     .strengths{overflow:hidden;background:linear-gradient(115deg,transparent 60%,rgb(18 62 104 / 14%)),var(--ink)}
     .strengths::after,.approach::after{position:absolute;z-index:0;right:-4%;bottom:-20%;width:420px;aspect-ratio:1;border:1px solid rgb(214 166 76 / 8%);content:"";transform:rotate(45deg)}
     .strengths .section-inner,.approach .section-inner{position:relative;z-index:1}
@@ -79,6 +88,20 @@
     .step-number{display:block;margin-bottom:16px;color:var(--gold-bright);font-family:Georgia,serif;font-size:1.85rem;line-height:1}
     .step-mark{position:relative;display:grid;width:54px;height:54px;margin:0 auto 20px;place-items:center;border:1px solid var(--gold);color:var(--gold-bright);font-family:Georgia,serif;font-size:.68rem;transform:rotate(45deg)}.step-mark span{transform:rotate(-45deg)}
     .step h3{margin:0 0 13px;font-family:var(--serif);font-size:clamp(1.12rem,1.7vw,1.35rem);font-weight:500}.step p{margin:0;color:var(--muted);font-size:.86rem;line-height:1.85}
+    .cases{overflow:hidden;background:linear-gradient(125deg,#04172c,#071e37)}
+    .cases::before{position:absolute;top:12%;left:-220px;width:440px;aspect-ratio:1;border:1px solid rgb(214 166 76 / 8%);content:"";transform:rotate(45deg)}
+    .cases .section-title{white-space:nowrap}
+    .cases-header{position:relative;display:grid;grid-template-columns:minmax(210px,.55fr) minmax(0,1.45fr);gap:clamp(60px,10vw,140px);align-items:start;margin-bottom:64px}
+    .cases-intro{margin:0;color:#cbd3dd;font-size:clamp(.95rem,1.4vw,1.05rem);line-height:2.15}
+    .cases-draft-note{display:block;margin-top:18px;color:rgb(248 245 237 / 55%);font-size:.76rem;letter-spacing:.05em}
+    .case-list{position:relative;margin:0;padding:0;border-top:1px solid var(--line);list-style:none}
+    .case-item{display:grid;grid-template-columns:180px minmax(0,1fr);gap:clamp(32px,6vw,86px);padding:clamp(44px,6vw,70px) 0;border-bottom:1px solid rgb(214 166 76 / 34%)}
+    .case-meta{color:var(--gold-bright);font-size:.78rem;line-height:1.8;letter-spacing:.1em}
+    .case-number{display:block;margin-bottom:16px;font-family:Georgia,"Times New Roman",serif;font-size:1.55rem;line-height:1}
+    .case-content h3{margin:0 0 22px;font-family:var(--serif);font-size:clamp(1.35rem,2.3vw,1.9rem);font-weight:500;line-height:1.65;letter-spacing:.035em}
+    .case-summary{margin:0;color:#cbd3dd;font-size:.94rem;line-height:2.05}
+    .case-voice{position:relative;margin:28px 0 0;padding:24px 28px 24px 54px;border-left:1px solid var(--gold);background:rgb(2 11 23 / 38%);color:#e2e6eb;font-family:var(--serif);font-size:.95rem;line-height:2}
+    .case-voice::before{position:absolute;top:16px;left:19px;color:var(--gold-bright);content:"“";font-family:Georgia,"Times New Roman",serif;font-size:2.6rem;line-height:1}
     .company{background:var(--ink)}.company-grid{display:grid;grid-template-columns:minmax(210px,.55fr) minmax(0,1.45fr);gap:clamp(60px,10vw,140px);align-items:start}
     .company-list{margin:0;border-top:1px solid var(--line)}.company-row{display:grid;grid-template-columns:180px 1fr;border-bottom:1px solid rgb(214 166 76 / 34%)}
     .company-row dt,.company-row dd{margin:0;padding:25px 20px}.company-row dt{color:var(--gold-bright);font-size:.84rem;letter-spacing:.12em}.company-row dd{color:#d8dee6;border-left:1px solid rgb(214 166 76 / 34%);font-size:.95rem}
@@ -87,9 +110,9 @@
     @keyframes art-ignite{from{opacity:0;transform:scale(1.025);filter:brightness(1) contrast(.94) saturate(.92)}to{opacity:1;transform:none;filter:brightness(1.42) contrast(.9) saturate(.96)}}
     @keyframes art-ignite-mobile{from{opacity:0;transform:scale(1.018);filter:brightness(.9) contrast(1) saturate(.98)}to{opacity:1;transform:none;filter:brightness(1.06) contrast(.98) saturate(1.02)}}
     @keyframes scroll-pulse{0%,100%{transform:scaleY(.45);transform-origin:top;opacity:.4}50%{transform:scaleY(1);transform-origin:top;opacity:1}}
-    @media(max-width:920px){.hero-copy{width:min(580px,68vw)}.about-grid,.company-grid{grid-template-columns:1fr;gap:54px}.strength-list{grid-template-columns:repeat(2,1fr)}.strength-item:nth-child(2){border-right:0}.strength-item:nth-child(n+3){border-top:1px solid rgb(214 166 76 / 27%)}.strength-item:nth-child(3){padding-left:0}.steps{grid-template-columns:repeat(2,1fr);row-gap:70px}.step:nth-child(2)::after,.step:nth-child(2)::before{display:none}}
+    @media(max-width:920px){.hero-copy{width:min(580px,68vw)}.about-grid,.information-grid,.cases-header,.company-grid{grid-template-columns:1fr;gap:54px}.strength-list{grid-template-columns:repeat(2,1fr)}.strength-item:nth-child(2){border-right:0}.strength-item:nth-child(n+3){border-top:1px solid rgb(214 166 76 / 27%)}.strength-item:nth-child(3){padding-left:0}.steps{grid-template-columns:repeat(2,1fr);row-gap:70px}.step:nth-child(2)::after,.step:nth-child(2)::before{display:none}}
     @media(max-width:720px){.site-header{height:68px}.header-inner{position:relative}.brand{gap:5px;font-size:clamp(.8rem,4vw,.98rem)}.brand-consulting{margin-left:0;font-size:1em;letter-spacing:inherit}.menu-toggle{position:absolute;top:50%;right:0;z-index:2;display:block;transform:translateY(-50%)}.menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(7px) rotate(45deg)}.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}.menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-7px) rotate(-45deg)}.nav-list{position:fixed;inset:68px 0 auto;display:grid;gap:0;padding:20px var(--gutter) 24px;transform:translateY(-130%);border-bottom:1px solid var(--line);background:var(--logo-navy);transition:transform 260ms ease}.nav-list.is-open{transform:none}.nav-list a{display:block;padding:13px 0}.hero{min-height:800px}.hero::before{inset:68px 0 0;background:linear-gradient(90deg,rgb(2 11 23 / 22%) 0%,rgb(2 11 23 / 8%) 72%,transparent 100%)}.hero-inner{align-self:start;padding-top:145px}.hero-copy{width:100%}.hero h1{font-size:clamp(2.65rem,10.8vw,3.9rem);line-height:1.36;text-shadow:0 3px 18px rgb(2 11 23 / 72%),0 1px 4px rgb(2 11 23 / 60%)}.hero-lead{overflow-wrap:anywhere;font-weight:500;text-shadow:0 2px 8px rgb(2 11 23 / 92%),0 0 3px rgb(2 11 23 / 80%)}.hero-art{inset:68px 0 0;height:calc(100% - 68px);animation-name:art-ignite-mobile}.hero-art img{object-position:center}.scroll-cue{display:none}.company-row{grid-template-columns:110px 1fr}.company-row dt,.company-row dd{padding:20px 14px}}
-    @media(max-width:560px){:root{--gutter:22px;--section:88px}.brand-mark{width:31px;height:34px}.brand-mark img{width:228px;top:-40px;left:-99px}.strength-list,.steps{grid-template-columns:1fr}.strength-item,.strength-item:first-child,.strength-item:nth-child(3),.strength-item:last-child{min-height:auto;padding:34px 0;border-right:0;border-bottom:1px solid rgb(214 166 76 / 27%)}.strength-item:first-child{padding-top:40px}.strength-item:last-child{border-bottom:0}.strength-item:nth-child(n+3){border-top:0}.strength-number{margin-bottom:18px}.steps{row-gap:0}.step,.step:first-child,.step:last-child{padding:34px 0 42px 82px;text-align:left}.step:not(:last-child)::after{top:129px;right:auto;left:27px;display:block;width:1px;height:34px;background:linear-gradient(var(--gold),rgb(214 166 76 / 45%))}.step:not(:last-child)::before{top:154px;right:auto;left:22px;display:block;width:9px;height:9px;border-top:0;border-right:1px solid var(--gold);border-bottom:1px solid var(--gold);transform:rotate(45deg)}.step-number{position:absolute;top:35px;left:15px}.step-mark{position:absolute;top:78px;left:7px;width:42px;height:42px;margin:0}.company-row{grid-template-columns:94px 1fr}.company-row dd{font-size:.86rem}}
+    @media(max-width:560px){:root{--gutter:22px;--section:88px}.brand-mark{width:31px;height:34px}.brand-mark img{width:228px;top:-40px;left:-99px}.information-item{grid-template-columns:1fr;gap:12px;padding:30px 0}.information-meta{font-size:.78rem}.strength-list,.steps{grid-template-columns:1fr}.strength-item,.strength-item:first-child,.strength-item:nth-child(3),.strength-item:last-child{min-height:auto;padding:34px 0;border-right:0;border-bottom:1px solid rgb(214 166 76 / 27%)}.strength-item:first-child{padding-top:40px}.strength-item:last-child{border-bottom:0}.strength-item:nth-child(n+3){border-top:0}.strength-number{margin-bottom:18px}.steps{row-gap:0}.step,.step:first-child,.step:last-child{padding:34px 0 42px 82px;text-align:left}.step:not(:last-child)::after{top:129px;right:auto;left:27px;display:block;width:1px;height:34px;background:linear-gradient(var(--gold),rgb(214 166 76 / 45%))}.step:not(:last-child)::before{top:154px;right:auto;left:22px;display:block;width:9px;height:9px;border-top:0;border-right:1px solid var(--gold);border-bottom:1px solid var(--gold);transform:rotate(45deg)}.step-number{position:absolute;top:35px;left:15px}.step-mark{position:absolute;top:78px;left:7px;width:42px;height:42px;margin:0}.case-item{grid-template-columns:1fr;gap:18px;padding:42px 0}.case-meta{display:flex;align-items:baseline;gap:14px}.case-number{margin:0}.case-content h3{font-size:1.35rem}.case-voice{padding:22px 20px 22px 43px}.case-voice::before{left:14px}.company-row{grid-template-columns:94px 1fr}.company-row dd{font-size:.86rem}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal,.hero-art{opacity:1;transform:none}}
   </style>
 </head>
@@ -99,7 +122,7 @@
     <div class="header-inner">
       <a class="brand" href="#top" aria-label="IGNITE Partners CONSULTING トップへ"><span class="brand-mark" aria-hidden="true"><img src="assets/brand/ignite-partners-logo.png" alt="" /></span><span>IGNITE</span><span class="brand-partners">Partners</span><span class="brand-consulting">CONSULTING</span></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="メニューを開く"><span></span><span></span><span></span></button>
-      <nav aria-label="メインナビゲーション"><ul class="nav-list" id="site-nav"><li><a href="#about">私たちについて</a></li><li><a href="#strengths">提供価値</a></li><li><a href="#approach">共創の流れ</a></li><li><a href="#company">会社情報</a></li></ul></nav>
+      <nav aria-label="メインナビゲーション"><ul class="nav-list" id="site-nav"><li><a href="#about">私たちについて</a></li><li><a href="#information">お知らせ</a></li><li><a href="#strengths">提供価値</a></li><li><a href="#approach">支援の流れ</a></li><li><a href="#company">会社情報</a></li></ul></nav>
     </div>
   </header>
   <main id="main">
@@ -110,6 +133,12 @@
     </section>
     <section class="about" id="about" aria-labelledby="about-title">
       <div class="section-inner about-grid"><div class="reveal"><p class="section-label">About</p><h2 class="section-title" id="about-title">まだ形になっていない<br />可能性を、事業の力に。</h2></div><div class="about-copy reveal"><p>企業の中には、まだ十分に生かされていない商品、技術、人材、そしてつながりがあります。可能性があっても、何から始め、どの順序で進めればよいのかが見えなければ、事業は前へ進みません。</p><p>IGNITE Partners CONSULTINGは、経営者と同じ目線で目標を定め、実現までの道筋を組み立て、一つひとつの行動に落とし込みます。</p><p>私たちが目指すのは、提案して終わる支援ではありません。人と企業をつなぎ、成果が生まれる仕組みをともにつくります。</p></div></div>
+    </section>
+    <section class="information" id="information" aria-labelledby="information-title">
+      <div class="section-inner information-grid"><div class="reveal"><p class="section-label">Information</p><h2 class="section-title" id="information-title">お知らせ</h2></div><div class="information-list">
+        <article class="information-item reveal"><div class="information-meta">2027.04<br />COMING SOON</div><div class="information-copy"><h3><span class="information-name">IGNITE PARTNERS HOLDINGS</span><br />発足へ。</h3><p>2027年4月、7社を結ぶホールディングス体制が始動します。各社が培ってきた専門性とネットワークを掛け合わせ、より多角的なサービスと、地域や国境を越えた新たな事業展開を推進してまいります。</p></div></article>
+        <article class="information-item reveal"><div class="information-meta">ENGAGEMENT<br />POLICY</div><div class="information-copy"><h3>ご紹介による案件のみを<br />お取り扱いしています。</h3><p>一社一社と深く向き合い、責任ある伴走支援をお届けするため、ご相談・ご契約は既存のお客様およびパートナーからのご紹介に限らせていただいております。</p></div></article>
+      </div></div>
     </section>
     <section class="strengths" id="strengths" aria-labelledby="strengths-title">
       <div class="section-inner"><div class="reveal"><p class="section-label">Value</p><h2 class="section-title" id="strengths-title">成果を生む、4つの力。</h2></div><div class="strength-list">
@@ -125,6 +154,13 @@
         <li class="step reveal"><span class="step-number">02</span><span class="step-mark" aria-hidden="true"><span>PLAN</span></span><h3>道筋を描く</h3><p>課題を分解し、優先順位と実行計画を設計します。</p></li>
         <li class="step reveal"><span class="step-number">03</span><span class="step-mark" aria-hidden="true"><span>ACT</span></span><h3>ともに動く</h3><p>営業、連携、提案など、必要な行動を現場で進めます。</p></li>
         <li class="step reveal"><span class="step-number">04</span><span class="step-mark" aria-hidden="true"><span>GROW</span></span><h3>成果につなげる</h3><p>検証と改善を重ね、継続できる仕組みへ育てます。</p></li>
+      </ol></div>
+    </section>
+    <section class="cases" id="cases" aria-labelledby="cases-title">
+      <div class="section-inner"><div class="cases-header"><div class="reveal"><p class="section-label">Case Studies</p><h2 class="section-title" id="cases-title">ご支援事例</h2></div><div class="reveal"><p class="cases-intro">私たちは、経営者の思いと事業の現在地を丁寧に整理し、目標の設定から戦略設計、実行まで一貫して支援しています。</p><small class="cases-draft-note">※以下は掲載イメージです。実際の内容・掲載許可を確認後に正式公開します。</small></div></div><ol class="case-list">
+        <li class="case-item reveal"><div class="case-meta"><span class="case-number">01</span><span>製造業<br />販路開拓・営業戦略支援</span></div><div class="case-content"><h3>技術の価値を整理し、<br />新たな市場への道筋を明確に。</h3><p class="case-summary">優れた技術を持ちながら、その価値をどのように伝え、販路を広げていくべきかが明確になっていない状況でした。商品特性や既存顧客をあらためて分析し、提案先の選定、営業資料の整理、パートナー企業との接点づくりまで支援。新たな販路開拓に向けた具体的な活動をスタートしました。</p><blockquote class="case-voice">自社だけでは気づけなかった商品の可能性を見つけてもらいました。方向性を示すだけでなく、提案や交渉の場まで一緒に動いてもらえることが心強かったです。</blockquote></div></li>
+        <li class="case-item reveal"><div class="case-meta"><span class="case-number">02</span><span>サービス業<br />新規事業開発支援</span></div><div class="case-content"><h3>経営者の構想を、<br />実行できる事業計画へ。</h3><p class="case-summary">新しいサービスの構想はあったものの、対象顧客や提供方法、収益化までの道筋が定まっていませんでした。経営者へのヒアリングを重ね、事業コンセプトと優先課題を整理。小さく検証できる形へ計画を分解し、サービス提供に向けた準備とパートナー選定を進めました。</p><blockquote class="case-voice">頭の中にあった漠然としたアイデアが、一つずつ実行できる計画に変わりました。迷ったときに同じ目線で考えてもらえる存在です。</blockquote></div></li>
+        <li class="case-item reveal"><div class="case-meta"><span class="case-number">03</span><span>地域企業<br />営業組織構築支援</span></div><div class="case-content"><h3>個人に依存していた営業活動を、<br />継続できる仕組みへ。</h3><p class="case-summary">営業活動が一部の担当者の経験や人脈に依存し、社内で情報やノウハウを共有しにくいことが課題でした。顧客情報、商談状況、提案方法を整理し、社内で共有できる営業プロセスを設計。定期的な振り返りと改善を重ね、組織として営業活動を進められる体制づくりを支援しました。</p><blockquote class="case-voice">現場の状況を理解したうえで、無理なく続けられる方法を一緒につくってもらいました。社内で営業について話し合う基準ができたことも、大きな変化です。</blockquote></div></li>
       </ol></div>
     </section>
     <section class="company" id="company" aria-labelledby="company-title">
